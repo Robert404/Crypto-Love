@@ -13,6 +13,10 @@
 		0A0BA19D267696E2008E8E09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BA19C267696E2008E8E09 /* Preview Assets.xcassets */; };
 		0A0BA1A8267696E2008E8E09 /* CryptoLoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BA1A7267696E2008E8E09 /* CryptoLoveTests.swift */; };
 		0A0BA1B3267696E2008E8E09 /* CryptoLoveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BA1B2267696E2008E8E09 /* CryptoLoveUITests.swift */; };
+		0A0BA1C226769A4D008E8E09 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BA1C126769A4D008E8E09 /* Color.swift */; };
+		0A0BA1C826769DE5008E8E09 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BA1C726769DE5008E8E09 /* HomeView.swift */; };
+		0A0BA1CC26769FCB008E8E09 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BA1CB26769FCB008E8E09 /* CircleButtonView.swift */; };
+		0A0BA1CE2676A964008E8E09 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0BA1CD2676A964008E8E09 /* CircleButtonAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		0A0BA1AE267696E2008E8E09 /* CryptoLoveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoLoveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A0BA1B2267696E2008E8E09 /* CryptoLoveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoLoveUITests.swift; sourceTree = "<group>"; };
 		0A0BA1B4267696E2008E8E09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A0BA1C126769A4D008E8E09 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0A0BA1C726769DE5008E8E09 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0A0BA1CB26769FCB008E8E09 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		0A0BA1CD2676A964008E8E09 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		0A0BA189267696E0008E8E09 = {
 			isa = PBXGroup;
 			children = (
+				0A0BA195267696E0008E8E09 /* CryptoLoveApp.swift */,
 				0A0BA194267696E0008E8E09 /* CryptoLove */,
 				0A0BA1A6267696E2008E8E09 /* CryptoLoveTests */,
 				0A0BA1B1267696E2008E8E09 /* CryptoLoveUITests */,
@@ -95,7 +104,8 @@
 		0A0BA194267696E0008E8E09 /* CryptoLove */ = {
 			isa = PBXGroup;
 			children = (
-				0A0BA195267696E0008E8E09 /* CryptoLoveApp.swift */,
+				0A0BA1C326769DAA008E8E09 /* Core */,
+				0A0BA1C026769A3A008E8E09 /* Extensions */,
 				0A0BA197267696E0008E8E09 /* ContentView.swift */,
 				0A0BA199267696E2008E8E09 /* Assets.xcassets */,
 				0A0BA19E267696E2008E8E09 /* Info.plist */,
@@ -128,6 +138,64 @@
 				0A0BA1B4267696E2008E8E09 /* Info.plist */,
 			);
 			path = CryptoLoveUITests;
+			sourceTree = "<group>";
+		};
+		0A0BA1C026769A3A008E8E09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BA1C126769A4D008E8E09 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0A0BA1C326769DAA008E8E09 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BA1C926769F9C008E8E09 /* Components */,
+				0A0BA1C426769DBB008E8E09 /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0A0BA1C426769DBB008E8E09 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BA1C626769DCF008E8E09 /* ViewModels */,
+				0A0BA1C526769DC9008E8E09 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0A0BA1C526769DC9008E8E09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BA1C726769DE5008E8E09 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A0BA1C626769DCF008E8E09 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0A0BA1C926769F9C008E8E09 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BA1CA26769FA7008E8E09 /* CircleButton */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0A0BA1CA26769FA7008E8E09 /* CircleButton */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BA1CB26769FCB008E8E09 /* CircleButtonView.swift */,
+				0A0BA1CD2676A964008E8E09 /* CircleButtonAnimationView.swift */,
+			);
+			path = CircleButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0BA198267696E0008E8E09 /* ContentView.swift in Sources */,
+				0A0BA1C826769DE5008E8E09 /* HomeView.swift in Sources */,
 				0A0BA196267696E0008E8E09 /* CryptoLoveApp.swift in Sources */,
+				0A0BA1CC26769FCB008E8E09 /* CircleButtonView.swift in Sources */,
+				0A0BA1C226769A4D008E8E09 /* Color.swift in Sources */,
+				0A0BA1CE2676A964008E8E09 /* CircleButtonAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,8 +489,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoLove/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoLove/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -428,6 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = My.CryptoLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,8 +512,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoLove/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoLove/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -449,6 +524,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = My.CryptoLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

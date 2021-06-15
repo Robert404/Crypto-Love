@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct CryptoLoveApp: App {
+    
+    @StateObject private var viewModel = HomeViewModel()
     var body: some Scene {
         WindowGroup {
             NavigationView{
                 ContentView()
                     .navigationBarHidden(true)
             }
+            .environmentObject(viewModel)
         }
     }
 }

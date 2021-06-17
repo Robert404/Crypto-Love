@@ -13,6 +13,8 @@ class HomeViewModel: ObservableObject {
     @Published var allCoins: [Coin] = []
     @Published var portfolioCoins: [Coin] = []
     
+    @Published var searchText: String = ""
+    
     private let data = CoinDataService()
     private var cancellable = Set<AnyCancellable>()
     
@@ -25,5 +27,27 @@ class HomeViewModel: ObservableObject {
             self?.allCoins = returnedCoins
         }
         .store(in: &cancellable)
+    
+        
+        $searchText
+            .combineLatest(data.$coins)
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .map(filteredCoins)
+            .sink{ [weak self] (returnedCoins) in
+                self?.allCoins = returnedCoins
+            }.store(in: &cancellable)
+    }
+    
+    
+    private func filteredCoins(text: String, coins: [Coin]) -> [Coin] {
+        guard !text.isEmpty else { return coins }
+        
+        let lowerCased = text.lowercased()
+    
+        return coins.filter { coin -> Bool in
+            return coin.name.lowercased().contains(lowerCased) ||
+                coin.symbol.lowercased().contains(lowerCased) ||
+                coin.id.lowercased().contains(lowerCased)
+        }
     }
 }

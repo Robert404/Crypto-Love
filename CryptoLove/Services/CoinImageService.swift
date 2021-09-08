@@ -45,7 +45,7 @@ class CoinImageService {
                 return UIImage(data: data)
             })
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] returnedImage in
-                guard let self  = self, let downloadedImage = returnedImage else { return }
+                guard let self = self, let downloadedImage = returnedImage else { return }
                 self.image = downloadedImage
                 self.imageSub?.cancel()
                 self.fileManager.saveImage(image: downloadedImage, imageName: self.imageName, folderName: self.folderName)
